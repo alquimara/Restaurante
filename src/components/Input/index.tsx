@@ -15,10 +15,10 @@ import { IconType } from 'react-icons/lib';
 interface propsInput{
   name:string
   icon?:IconType,
-  placeholder:any,
+  placeholder:string,
 }
 const Input = ({ name, icon:Icon, ...placeholder }:propsInput) => {
-  const inputRef = useRef<any>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
